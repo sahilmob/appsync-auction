@@ -7,9 +7,9 @@ import App from "./App";
 import AppSyncConfig from "./aws-exports";
 import React from "react";
 import ReactDOM from "react-dom";
-import { Rehydrated } from "aws-appsync-react"; // this needs to also be installed when working with React
 
 const client = new AWSAppSyncClient({
+	disableOffline: true,
 	url: AppSyncConfig.aws_appsync_graphqlEndpoint,
 	region: AppSyncConfig.aws_appsync_region,
 	auth: {
@@ -21,9 +21,7 @@ const client = new AWSAppSyncClient({
 
 ReactDOM.render(
 	<ApolloProvider client={client}>
-		<Rehydrated>
-			<App />
-		</Rehydrated>
+		<App />
 	</ApolloProvider>,
 	document.getElementById("root")
 );
