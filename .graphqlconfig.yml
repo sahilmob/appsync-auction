@@ -1,5 +1,5 @@
 projects:
-  api:
+  AuthApi:
     schemaPath: src/graphql/schema.json
     includes:
       - src/graphql/**/*.ts
@@ -10,7 +10,7 @@ projects:
         codeGenTarget: typescript
         generatedFileName: src/API.ts
         docsFilePath: src/graphql
-        graphQLApiId: cjuzbq5zlvh3jo7qxtyrs426lm
+        graphQLApiId: 4wfp4ywg4jfv5p7pzpbfvyhoaa
       endpoints:
         prod: >-
-          https://f73fn7bg3fblzacovny7uwwjsy.appsync-api.us-east-1.amazonaws.com/graphql
+          https://tggqvtymyvhpnpdxev6lxyhndq.appsync-api.us-east-1.amazonaws.com/graphql
